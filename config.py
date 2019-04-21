@@ -1,7 +1,7 @@
 import os
 
 # grab base directory
-BASE_DIR = os.path.abspath(os.path.dirname(__file__)))
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
@@ -13,6 +13,7 @@ class Config:
     FEATUREQUEST_SUBJECT_PREFIX = '[featurequest]'
     FEATUREQUEST_MAIL_SENDER = 'FEATUREQUEST <featurequest@admin.com>'
     FEATUREQUEST_ADMIN = os.environ.get('FEATUREQUEST_ADMIN')
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
 
     @staticmethod
     def init_app(app):
